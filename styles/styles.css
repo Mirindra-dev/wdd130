@@ -1,4 +1,13 @@
 
+:root {
+    --background-color: #eee;
+    --color: #333;
+    --text-align: center;
+    --width : 40em;
+    --margin : 1em;
+    --border : 1px solid rgb(0 0 0 / 0.2); /* 1 */
+    --padding : 1em
+}
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -25,13 +34,13 @@ main {
     max-width: 840px;
 }
 aside {
-    background-color: #eee;
-    color: #333;
-    text-align: center;
-    width : 40em;
-    margin : 1em;
-    border : 1px solid rgb(0 0 0 / 0.2); /* 1 */
-    padding : 1em
+    background-color: var(--background-color);
+    color: var(--color);
+    text-align: var(--text-align);
+    width : var(--width);
+    margin : var(--margin);
+    border : var(--border);
+    padding : var(--padding);
 }
 aside img {
     width: 200px;
