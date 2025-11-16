@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #0a3d62;     /* deep blue */
+  --secondary-color: #82ccdd;  /* soft aqua */
+  --accent1-color: #1e272e;    /* dark charcoal */
+  --accent2-color: #f5f6fa;    /* light gray/white */
+  --heading-font: "Georgia", serif;
+  --body-font: "Arial", Helvetica, sans-serif;
+}
+
+/* ================================
+   CSS Reset
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Base Page Styling
+   ================================ */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+  line-height: 1.6;
+}
+
+/* Limit page width and center content */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Basic spacing */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Remove underline from social media image links */
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* ================================
+   HERO SECTION STYLING
+   ================================ */
+.hero {
+  position: relative; /* required for absolute children */
+  margin-bottom: 24px;
+}
+
+/* Hero background image */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Hero title overlay */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.75;
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Article overlay */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* Article image — float inside article only */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin: 0 0 10px 10px;
+  border-radius: 6px;
+}
+
+/* ================================
+   HEADER & NAVIGATION
+   ================================ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  padding: 10px 20px;
+}
+
+header img {
+  width: 120px;
+  height: auto;
+}
+
+nav a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--accent2-color);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+}
+
+footer .socialmedia img {
+  width: 32px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
