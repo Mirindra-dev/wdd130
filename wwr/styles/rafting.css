@@ -3,23 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
-  --primary-color: #0a3d62;     /* deep blue */
-  --secondary-color: #82ccdd;  /* soft aqua */
-  --accent1-color: #1e272e;    /* dark charcoal */
-  --accent2-color: #f5f6fa;    /* light gray/white */
+  --primary-color: #0a3d62;
+  --secondary-color: #82ccdd;
+  --accent1-color: #1e272e;
+  --accent2-color: #f5f6fa;
+
   --heading-font: "Georgia", serif;
   --body-font: "Arial", Helvetica, sans-serif;
 }
 
 /* ================================
-   CSS Reset
-   ================================ */
-
-
-/* ================================
-   Base Page Styling
-   ================================ */
+   BASE
+================================ */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
@@ -27,117 +24,150 @@ body {
   line-height: 1.6;
 }
 
-/* Limit page width and center content */
-header, main, footer {
-  width: 840px;
+header,
+main,
+footer {
+  width: 900px;
   margin: 0 auto;
 }
 
-/* Headings */
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+/* ================================
+   HEADER USING GRID
+================================ */
+.header-grid {
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
 }
 
-/* Basic spacing */
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+.logo {
+  width: 120px;
 }
 
-/* Remove underline from social media image links */
-.socialmedia a {
+/* NAV USING FLEX */
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: var(--accent2-color);
   text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+.main-nav a:hover {
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+  border-radius: 6px;
 }
 
 /* ================================
-   HERO SECTION STYLING
-   ================================ */
+   HERO SECTION
+================================ */
 .hero {
-  position: relative; /* required for absolute children */
-  margin-bottom: 24px;
+  position: relative;
+  margin-bottom: 40px;
 }
 
-/* Hero background image */
-.hero img {
-  display: block;
+.hero-img {
   width: 100%;
-  height: auto;
+  display: block;
 }
 
-/* Hero title overlay */
 .hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
-  padding: 16px;
   text-align: center;
-  opacity: 0.75;
-  background-color: var(--secondary-color);
-  color: var(--accent1-color);
+  padding: 16px;
   font-size: 2rem;
-  font-weight: bold;
+  background: var(--secondary-color);
+  opacity: 0.9;
+  color: var(--accent1-color);
 }
 
-/* Article overlay */
 .hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
   right: 20px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   padding: 16px;
   border-radius: 8px;
 }
 
-/* Article image — float inside article only */
 .hero article img {
   float: right;
   width: 125px;
-  margin: 0 0 10px 10px;
+  margin-left: 10px;
   border-radius: 6px;
 }
 
 /* ================================
-   HEADER & NAVIGATION
-   ================================ */
-header {
-  display: flex;
+   HISTORY SECTION
+================================ */
+.history {
+  margin: 40px 0;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 250px 1fr;
   align-items: center;
-  justify-content: space-between;
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
-  padding: 10px 20px;
+  gap: 20px;
+  padding: 20px;
 }
 
-header img {
-  width: 120px;
-  height: auto;
+.history-grid img {
+  width: 100%;
+  border-radius: 8px;
 }
 
-nav a {
-  margin-right: 16px;
-  text-decoration: none;
-  color: var(--accent2-color);
-  font-weight: bold;
+/* ================================
+   ADVENTURES SECTION
+================================ */
+.adventures {
+  margin: 40px 0;
 }
 
-nav a:hover {
-  color: var(--secondary-color);
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.adventure-gallery figure {
+  text-align: center;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  border-radius: 6px;
 }
 
 /* ================================
    FOOTER
-   ================================ */
+================================ */
 footer {
-  text-align: center;
-  padding: 20px 0;
   background-color: var(--primary-color);
   color: var(--accent2-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .socialmedia {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 footer .socialmedia img {
-  width: 32px;
-  margin: 0 10px;
-  vertical-align: middle;
+  width: 40px;
 }
