@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL BODY STYLING */
+body {
+  font-family: "Merriweather", Georgia, serif;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 1.1rem;
+  padding-bottom: 4rem;
+}
+
+/* HEADER & MAIN TITLE */
+header {
+  width: 650px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: navy;
+  margin-bottom: 1rem;
+}
+
+/* FORM LAYOUT */
+form {
+  width: 650px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #eee;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* FIELDSET */
+fieldset {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  display: grid;
+  gap: 0.7rem;
+}
+
+/* LEGEND */
+legend {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  color: navy;
+  font-weight: bold;
+}
+
+/* FORM ELEMENT FONT */
+label,
+input,
+select,
+textarea,
+button {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* FORM-ITEM GRID */
+.form-item {
+  display: grid;
+  align-items: center;
+}
+
+/* COLUMN LAYOUTS */
+.column1 {
+  grid-template-columns: 3fr 1fr;
+  margin: 0.5rem 0;
+}
+
+.column2 {
+  grid-template-columns: 1fr 2fr;
+  margin: 0.5rem 0;
+}
+
+/* SPECIAL LAYOUT FOR TEXTAREA */
+.textarea-row {
+  grid-template-columns: 1fr 3fr;
+  margin: 0.5rem 0;
+}
+
+.textarea-row textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+/* LABELS */
+label {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+/* INPUTS, SELECT, TEXTAREA */
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  background: white;
+}
+
+/* CHECKBOX SIZING */
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  vertical-align: bottom;
+}
+
+/* BUTTON */
+button {
+  margin: 1rem auto 0;
+  padding: 0.75rem 1.5rem;
+  background-color: navy;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+
+/* FOOTER */
+footer {
+  width: 650px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  color: #777;
+  font-size: 0.8rem;
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+}
